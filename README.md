@@ -10,7 +10,7 @@ Automated tests can be run with
 
 ## Running
 
-Navigate to the dirctory of the created .jar. 
+Navigate to the dirctory of the created .jar. Ensure Project.db and CSC289DatabaseTest-1.0-SNAPSHOT.jar are in the same folder
 
 Once in the correct directory enter java -jar CSC289DatabaseTest-1.0-SNAPSHOT.jar
 
