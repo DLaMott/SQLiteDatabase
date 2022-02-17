@@ -29,6 +29,12 @@ public class SQLiteTableLoad {
                        +" FOREIGN KEY(EID) REFERENCES Employees(EID),"
                        +" FOREIGN KEY(CID) REFERENCES Customers(CID))";
 
+    /***
+     * Method intended to create SQlite tables.
+     * @param connection connection source to the database
+     * @param sql sql statement
+     * @throws SQLException upon invalid sql and or no database connection
+     */
     public static void createTable(Connection connection, String sql)throws SQLException {
         Statement statement = connection.createStatement();
         statement.executeUpdate(sql);
