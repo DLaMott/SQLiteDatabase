@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DecimalFormat;
 
 public class SQLiteOutput {
 
@@ -26,16 +27,17 @@ public class SQLiteOutput {
         ResultSet resultSet = statement.executeQuery(sql);
 
         System.out.println("\nEmployees");
-        System.out.println("--------------------------------------");
-        System.out.printf("%n %10s %10s", "First name", "Last Name");
+        System.out.println("-----------------------------------------------------------------------------------");
+        System.out.printf("%n %20s %20s %20s", "First name", "Last Name", "EmployeeID");
 
         while (resultSet.next()) {
             String firstName = resultSet.getString("EFname");
             String lastName = resultSet.getString("ELname");
-            System.out.printf("%n %10s %10s", firstName, lastName);
+            String EID = resultSet.getString("EID");
+            System.out.printf("%n %20s %20s %20s", firstName, lastName, EID);
         }
         System.out.println();
-        System.out.println("--------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
     }
 
     /***
@@ -51,17 +53,18 @@ public class SQLiteOutput {
         ResultSet resultSet = statement.executeQuery(sql);
 
         System.out.println("\nCustomers");
-        System.out.println("--------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
 
-        System.out.printf("%n %10s %10s", "First name", "Last Name");
+        System.out.printf("%n %20s %20s %20s", "First name", "Last Name", "CustomerID");
 
         while (resultSet.next()) {
             String firstName = resultSet.getString("CFname");
             String lastName = resultSet.getString("CLname");
-            System.out.printf("%n %10s %10s", firstName, lastName);
+            String CID = resultSet.getString("CID");
+            System.out.printf("%n %20s %20s %20s", firstName, lastName, CID);
         }
         System.out.println();
-        System.out.println("--------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
     }
 
     /***
@@ -77,16 +80,19 @@ public class SQLiteOutput {
         ResultSet resultSet = statement.executeQuery(sql);
 
         System.out.println("\nInventory");
-        System.out.println("--------------------------------------");
-        System.out.printf("%n %10s %10s", "IID", "Description");
+        System.out.println("-----------------------------------------------------------------------------------");
+        System.out.printf("%n %20s %20s %20s", "IID", "Description", "Price");
 
         while (resultSet.next()) {
             String inventoryID = resultSet.getString("IID");
             String inventoryDes = resultSet.getString("IDesc");
-            System.out.printf("%n %10s %10s", inventoryID, inventoryDes);
+            int inventoryPrice = resultSet.getInt("IPrice");
+            String price = DecimalFormat.getCurrencyInstance().format(inventoryPrice);
+
+            System.out.printf("%n %20s %20s %20s", inventoryID, inventoryDes, price);
         }
         System.out.println();
-        System.out.println("--------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------");
     }
 
     /***
@@ -108,12 +114,13 @@ public class SQLiteOutput {
         while (resultSet.next()) {
             String salesID = resultSet.getString("SID");
             String salesQTY = resultSet.getString("SQty");
-            String salesTotal = resultSet.getString("STotal");
+            int salesTotal = resultSet.getInt("STotal");
+            String price = DecimalFormat.getCurrencyInstance().format(salesTotal);
             String salesEID = resultSet.getString("EID");
             String salesIID = resultSet.getString("IID");
             String salesCID = resultSet.getString("CID");
             System.out.printf("%n %10s %10s %10s %10s %10s %10s",
-                    salesID, salesQTY, salesTotal, salesEID, salesIID, salesCID);
+                    salesID, salesQTY, price, salesEID, salesIID, salesCID);
         }
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------------");
