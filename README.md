@@ -14,7 +14,7 @@ Navigate to the dirctory of the created .jar.
 
 Once in the correct directory enter java -jar CSC289DatabaseTest-1.0-SNAPSHOT.jar
 
-Successful build will show output such as:
+Successful execution will show output such as:
 --------------------------------------
 
 Connection made
