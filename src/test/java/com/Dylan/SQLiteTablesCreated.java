@@ -1,8 +1,9 @@
 package com.Dylan;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import java.sql.Connection;
-import java.sql.SQLException;
+
+import java.sql.*;
 
 
 class SQLiteTablesCreated {
@@ -14,24 +15,33 @@ class SQLiteTablesCreated {
 
     Connection connection = Connect.connect();
 
+
     @Test
     void sqliteEmployeeTable() throws SQLException {
-        SQLiteOutput.sqliteEmployeeOutput(connection, EMPLOYEE_SQL);
-
+        //SQLiteOutput.sqliteEmployeeOutput(connection, EMPLOYEE_SQL);
+        Statement statement = connection.createStatement();
+        ResultSetMetaData resultSet = (ResultSetMetaData) statement.executeQuery(EMPLOYEE_SQL);
+        Assertions.assertEquals("Employees", resultSet.getTableName(1));
     }
 
     @Test
     void sqliteCustomerTable() throws SQLException {
-        SQLiteOutput.sqliteCustomerOutput(connection, CUSTOMER_SQL);
+        Statement statement = connection.createStatement();
+        ResultSetMetaData resultSet = (ResultSetMetaData) statement.executeQuery(CUSTOMER_SQL);
+        Assertions.assertEquals("Customers", resultSet.getTableName(1));
     }
 
     @Test
     void sqliteInventoryTable() throws SQLException {
-        SQLiteOutput.sqliteInventoryOutput(connection, INVENTORY_SQL);
+        Statement statement = connection.createStatement();
+        ResultSetMetaData resultSet = (ResultSetMetaData) statement.executeQuery(INVENTORY_SQL);
+        Assertions.assertEquals("Inventory", resultSet.getTableName(1));
     }
 
     @Test
     void sqliteSalesTable() throws SQLException {
-        SQLiteOutput.sqliteSalesOutput(connection, SALES_SQL);
+        Statement statement = connection.createStatement();
+        ResultSetMetaData resultSet = (ResultSetMetaData) statement.executeQuery(SALES_SQL);
+        Assertions.assertEquals("Sales", resultSet.getTableName(1));
     }
 }
