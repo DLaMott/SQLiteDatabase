@@ -1,3 +1,4 @@
+import os
 import sqlite3
 
 from Objects import Customer
@@ -5,7 +6,7 @@ from Objects import Employee
 from Objects import Inventory
 from Objects import Sales
 
-connection = sqlite3.connect(r"resources/project.db")
+connection = sqlite3.connect(os.path.realpath('../project.db'))
 
 cursor = connection.cursor()
 

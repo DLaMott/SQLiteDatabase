@@ -18,7 +18,6 @@ class SQLiteTablesCreated {
 
     @Test
     void sqliteEmployeeTable() throws SQLException {
-        //SQLiteOutput.sqliteEmployeeOutput(connection, EMPLOYEE_SQL);
         Statement statement = connection.createStatement();
         ResultSetMetaData resultSet = (ResultSetMetaData) statement.executeQuery(EMPLOYEE_SQL);
         Assertions.assertEquals("Employees", resultSet.getTableName(1));
