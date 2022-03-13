@@ -23,7 +23,7 @@ public class SQLiteTest {
             System.out.println("Error connecting to database");
             e.printStackTrace();
         }
-
+        UserMenu.menu();
 
     }
 }
