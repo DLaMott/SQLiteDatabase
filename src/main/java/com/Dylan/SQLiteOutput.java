@@ -9,7 +9,6 @@ import java.text.DecimalFormat;
 public class SQLiteOutput {
 
     public static final String EMPLOYEE_SQL = "SELECT * FROM Employees";
-    public static final String CUSTOMER_SQL = "SELECT * FROM Customers";
     public static final String INVENTORY_SQL = "SELECT * FROM Inventory";
     public static final String SALES_SQL = "SELECT * FROM Sales";
 
@@ -35,33 +34,6 @@ public class SQLiteOutput {
             String lastName = resultSet.getString("ELname");
             String EID = resultSet.getString("EID");
             System.out.printf("%n %20s %20s %20s", firstName, lastName, EID);
-        }
-        System.out.println();
-        System.out.println("-----------------------------------------------------------------------------------");
-    }
-
-    /***
-     * Contains predefined sql column labels defined by a {@link ResultSet}. Method will run a query for
-     * Customer first and last names within the Customer table. Upon completion the retrieved data will be
-     * output into a table format.
-     * @param connection Connection to the database
-     * @param sql sql statement to perform query
-     * @throws SQLException upon invalid sql statement
-     */
-    public static void sqliteCustomerOutput(Connection connection, String sql) throws SQLException {
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(sql);
-
-        System.out.println("\nCustomers");
-        System.out.println("-----------------------------------------------------------------------------------");
-
-        System.out.printf("%n %20s %20s %20s", "First name", "Last Name", "CustomerID");
-
-        while (resultSet.next()) {
-            String firstName = resultSet.getString("CFname");
-            String lastName = resultSet.getString("CLname");
-            String CID = resultSet.getString("CID");
-            System.out.printf("%n %20s %20s %20s", firstName, lastName, CID);
         }
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------------");
