@@ -1,6 +1,7 @@
 package com.Dylan.Menus;
 
-import com.Dylan.SqlEdits.UpdateCustomers;
+import com.Dylan.SqlUpdates.UpdateCustomers;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;

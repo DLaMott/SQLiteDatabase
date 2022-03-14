@@ -1,10 +1,11 @@
-package com.Dylan.Application;
+package com.Dylan;
 
 import com.Dylan.Menus.UserMenu;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class SQLiteMain {
+public class SQLiteTest {
 
     public static void main(String[] args) {
 

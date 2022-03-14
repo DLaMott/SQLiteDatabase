@@ -1,4 +1,4 @@
-package com.Dylan.SqlEdits;
+package com.Dylan.SqlUpdates;
 
 import java.sql.*;
 
