@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class SQLiteTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         try {
 
@@ -14,16 +14,12 @@ public class SQLiteTest {
             SQLiteTableLoad.createTable(connection, SQLiteTableLoad.INVENTORY_TABLE);
             SQLiteTableLoad.createTable(connection, SQLiteTableLoad.CUSTOMER_TABLE);
             SQLiteTableLoad.createTable(connection, SQLiteTableLoad.SALES_TABLE);
-            SQLiteOutput.sqliteEmployeeOutput(connection, SQLiteOutput.EMPLOYEE_SQL);
-            SQLiteOutput.sqliteCustomerOutput(connection, SQLiteOutput.CUSTOMER_SQL);
-            SQLiteOutput.sqliteInventoryOutput(connection, SQLiteOutput.INVENTORY_SQL);
-            SQLiteOutput.sqliteSalesOutput(connection, SQLiteOutput.SALES_SQL);
-
+            UserMenu.menu(connection);
         } catch (SQLException e) {
             System.out.println("Error connecting to database");
             e.printStackTrace();
         }
-        UserMenu.menu();
+
 
     }
 }
