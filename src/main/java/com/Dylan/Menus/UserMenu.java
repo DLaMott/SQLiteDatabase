@@ -25,7 +25,7 @@ public class UserMenu {
                     CustomerMenu.customerMenu(connection);
                     break;
                 case "2":
-                    System.out.println("Employees");
+                   EmployeeMenu.employeeMenu(connection);
                     break;
                 case "3":
                     System.out.println("Sales");
