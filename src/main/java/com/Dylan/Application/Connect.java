@@ -1,7 +1,6 @@
 package com.Dylan.Application;
 
 import com.Dylan.SqlEdits.SQLiteOutput;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
