@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class SQLiteTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Connection connection = Connect.connect();
 
@@ -16,7 +16,5 @@ public class SQLiteTest {
             System.out.println("Error connecting to database");
             e.printStackTrace();
         }
-
-
     }
 }

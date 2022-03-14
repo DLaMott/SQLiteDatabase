@@ -4,13 +4,18 @@ import java.sql.*;
 
 public class UpdateCustomers {
 
-    private static final String UPDATE_CUSTOMERS_BY_ID = "UPDATE Customers SET CFname = ?," +
-            "CLname = ? WHERE CID = ?";
-    private static final String UPDATE_CUSTOMER_BY_FIRSTNAME = "UPDATE Customers SET CFname = ?," +
-            " CLname = ? WHERE CFname = ?";
-    private static final String DELETE_CUSTOMER_BY_ID = "DELETE FROM Customers WHERE CID = ?";
-    private static final String ADD_CUSTOMER = "INSERT INTO Customers (CFname, CLname) VALUES (?, ?)";
-    public static final String CUSTOMER_SQL = "SELECT * FROM Customers";
+    private static final String UPDATE_CUSTOMERS_BY_ID =
+            "UPDATE Customers SET CFname = ?," +
+                    "CLname = ? WHERE CID = ?";
+    private static final String UPDATE_CUSTOMER_BY_FIRSTNAME =
+            "UPDATE Customers SET CFname = ?," +
+                    " CLname = ? WHERE CFname = ?";
+    private static final String DELETE_CUSTOMER_BY_ID =
+            "DELETE FROM Customers WHERE CID = ?";
+    private static final String ADD_CUSTOMER =
+            "INSERT INTO Customers (CFname, CLname) VALUES (?, ?)";
+    public static final String CUSTOMER_SQL =
+            "SELECT * FROM Customers";
 
 
     /***
@@ -28,10 +33,9 @@ public class UpdateCustomers {
         updateCustomer.setString(2, CLN);
         updateCustomer.setString(3, CID);
 
-        try{
+        try {
             updateCustomer.executeUpdate();
-        }
-        catch (SQLException ex){
+        } catch (SQLException ex) {
             System.out.println("Please try again!");
             ex.printStackTrace();
         }
@@ -53,10 +57,9 @@ public class UpdateCustomers {
         updateCustomerFirstName.setString(2, NewCLN);
         updateCustomerFirstName.setString(3, CFN);
 
-        try{
+        try {
             updateCustomerFirstName.executeUpdate();
-        }
-        catch (SQLException ex){
+        } catch (SQLException ex) {
             System.out.println("Please try again!");
             ex.printStackTrace();
         }

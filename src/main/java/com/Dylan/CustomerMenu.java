@@ -17,13 +17,13 @@ public class CustomerMenu {
 
     public static void customerMenu(Connection connection) throws SQLException {
 
-        while (isValid){
+        while (isValid) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(CustomerMenu);
             String input = scanner.nextLine();
 
 
-            switch (input){
+            switch (input) {
                 case "1":
                     System.out.println("Enter the Customer ID");
                     CID = scanner.nextLine();
@@ -44,7 +44,7 @@ public class CustomerMenu {
                     CustomerLN = scanner.nextLine();
 
                     UpdateCustomers.updateCustomerByFirst(CFN, CustomerFN, CustomerLN, connection);
-                    System.out.println(CustomerFN + " " + "has been changed to: " + CustomerFN + " "  + CustomerLN);
+                    System.out.println(CustomerFN + " " + "has been changed to: " + CustomerFN + " " + CustomerLN);
 
                     break;
                 case "3":
@@ -72,5 +72,5 @@ public class CustomerMenu {
                     break;
             }
         }
-        }
     }
+}

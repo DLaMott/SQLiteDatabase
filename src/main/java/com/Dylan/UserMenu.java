@@ -10,7 +10,7 @@ public class UserMenu {
 
         boolean isValidEntry = true;
 
-        while (isValidEntry){
+        while (isValidEntry) {
             System.out.println("Welcome to the DB Connection tool");
             System.out.println("Please choose fom the following:");
             System.out.println("1. Edit Customers\n2. Edit Employees\n3. Edit Sales\n4. Edit Inventory\n5. Show all tables \n6. Exit");
@@ -18,7 +18,7 @@ public class UserMenu {
             Scanner scanner = new Scanner(System.in);
             String idk = scanner.nextLine();
 
-            switch (idk){
+            switch (idk) {
                 case "1":
                     CustomerMenu.customerMenu(connection);
                     break;
