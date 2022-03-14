@@ -1,4 +1,6 @@
-package com.Dylan;
+package com.Dylan.Application;
+
+import com.Dylan.SqlEdits.SQLiteOutput;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

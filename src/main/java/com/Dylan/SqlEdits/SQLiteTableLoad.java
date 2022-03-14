@@ -1,4 +1,4 @@
-package com.Dylan;
+package com.Dylan.SqlEdits;
 
 import java.sql.Connection;
 import java.sql.SQLException;
