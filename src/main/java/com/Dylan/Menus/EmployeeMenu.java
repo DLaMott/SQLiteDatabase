@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class EmployeeMenu {
-    public static String EmployeeMenu =
+    private static String EmployeeMenu =
             "Employee menu\n1. Edit by ID\n2. Edit by first name\n3. Delete by ID" +
                     "\n4. Add employee\n5. Show employees\n6. Exit";
     public static boolean isValid = true;

@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class InventoryMenu {
 
     private static String InventoryMenu =
-            "Employee menu\n1. Edit by ID\n2. Delete by ID" +
+            "Inventory menu\n1. Edit by ID\n2. Delete by ID" +
                     "\n3. Add Inventory Item\n4. Show Inventory\n5. Exit";
     private static boolean isValid = true;
     private static String IID;

@@ -1,8 +1,6 @@
 package com.Dylan.Menus;
 
-import com.Dylan.SqlUpdates.SQLiteOutput;
-import com.Dylan.SqlUpdates.UpdateCustomers;
-import com.Dylan.SqlUpdates.UpdateEmployees;
+import com.Dylan.SqlUpdates.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -30,7 +28,7 @@ public class UserMenu {
                    EmployeeMenu.employeeMenu(connection);
                     break;
                 case "3":
-                    System.out.println("Sales");
+                    SalesMenu.salesMenu(connection);
                     break;
                 case "4":
                     InventoryMenu.inventoryMenu(connection);
@@ -38,8 +36,8 @@ public class UserMenu {
                 case "5":
                     UpdateEmployees.showEmployees(connection);
                     UpdateCustomers.showCustomers(connection);
-                    SQLiteOutput.sqliteInventoryOutput(connection, SQLiteOutput.INVENTORY_SQL);
-                    SQLiteOutput.sqliteSalesOutput(connection, SQLiteOutput.SALES_SQL);
+                    UpdateInventory.showInventory(connection);
+                    UpdateSales.showSales(connection);
                     break;
                 case "6":
                     System.out.println("Good bye!");
