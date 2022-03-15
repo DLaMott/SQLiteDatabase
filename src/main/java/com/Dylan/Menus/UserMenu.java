@@ -15,7 +15,7 @@ public class UserMenu {
         while (isValidEntry) {
             System.out.println("Welcome to the DB Connection tool");
             System.out.println("Please choose fom the following:");
-            System.out.println("1. Edit Customers\n2. Edit Employees\n3. Edit Sales\n4. Edit Inventory\n5. Show all tables \n6. Exit");
+            System.out.println("1. Customer menu\n2. Employee menu\n3. Sale menu\n4. Inventory menu\n5. Show all tables \n6. Exit");
 
             Scanner scanner = new Scanner(System.in);
             String selection = scanner.nextLine();
