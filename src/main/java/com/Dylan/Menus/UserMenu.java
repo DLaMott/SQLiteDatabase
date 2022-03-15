@@ -18,9 +18,9 @@ public class UserMenu {
             System.out.println("1. Edit Customers\n2. Edit Employees\n3. Edit Sales\n4. Edit Inventory\n5. Show all tables \n6. Exit");
 
             Scanner scanner = new Scanner(System.in);
-            String idk = scanner.nextLine();
+            String selection = scanner.nextLine();
 
-            switch (idk) {
+            switch (selection) {
                 case "1":
                     CustomerMenu.customerMenu(connection);
                     break;
