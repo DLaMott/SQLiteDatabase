@@ -1,7 +1,5 @@
 package com.Dylan;
 
-import com.Dylan.SqlUpdates.SQLiteOutput;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,7 +10,7 @@ import java.sql.SQLException;
 public class Connect {
     /***
      *
-     * @return a {@link Connection} for {@link SQLiteOutput}
+     * @return a {@link Connection} for {@link com.Dylan.Menus.UserMenu}
      */
     public static Connection connect() {
         Connection conn = null;
