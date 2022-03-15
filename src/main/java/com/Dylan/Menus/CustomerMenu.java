@@ -21,6 +21,10 @@ public class CustomerMenu {
 
     public static void customerMenu(Connection connection) throws SQLException {
 
+        if (!isValid){
+            isValid = true;
+        }
+
         while (isValid) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(CustomerMenu);

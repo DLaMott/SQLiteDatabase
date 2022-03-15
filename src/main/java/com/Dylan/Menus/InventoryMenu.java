@@ -1,8 +1,7 @@
 package com.Dylan.Menus;
 
-import com.Dylan.SqlUpdates.UpdateEmployees;
-import com.Dylan.SqlUpdates.UpdateInventory;
 
+import com.Dylan.SqlUpdates.UpdateInventory;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -13,12 +12,15 @@ public class InventoryMenu {
             "Inventory menu\n1. Edit by ID\n2. Delete by ID" +
                     "\n3. Add Inventory Item\n4. Show Inventory\n5. Exit";
     private static boolean isValid = true;
+
     private static String IID;
     private static String IDesc;
     private static String IPrice;
 
     public static void inventoryMenu(Connection connection) throws SQLException {
-
+        if (!isValid){
+            isValid = true;
+        }
         while (isValid) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(InventoryMenu);
