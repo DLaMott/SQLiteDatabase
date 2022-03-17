@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class CustomerMenu {
 
-    public static String CustomerMenu =
+    public static final String CustomerMenu =
             "Customer menu\n1. Edit by ID\n2. Edit by first name\n3. Delete by ID" +
                     "\n4. Add customer\n5. Show customers\n6. Exit";
     public static boolean isValid = true;
