@@ -7,7 +7,11 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class UserMenu {
-
+    /***
+     *
+     * @param connection a database connection
+     * @throws SQLException upon invalid connection and invalid table query
+     */
     public static void menu(Connection connection) throws SQLException {
 
         boolean isValidEntry = true;
