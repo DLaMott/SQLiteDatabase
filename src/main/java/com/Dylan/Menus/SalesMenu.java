@@ -20,7 +20,6 @@ public class SalesMenu {
     private static int EID;
     private static int IID;
 
-
     public static void salesMenu(Connection connection) throws SQLException {
 
         if (!isValid){

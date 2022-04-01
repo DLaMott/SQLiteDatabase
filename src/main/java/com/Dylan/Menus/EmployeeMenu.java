@@ -29,7 +29,6 @@ public class EmployeeMenu {
             System.out.println(EmployeeMenu);
             String input = scanner.nextLine();
 
-
             switch (input) {
                 case "1":
                     System.out.println("Enter the Employee ID");

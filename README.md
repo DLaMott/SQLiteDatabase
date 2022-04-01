@@ -1,4 +1,9 @@
 # SQLiteDatabase
+This project was created as a final programming capstone project for GTCC. The goal was to create a database application
+to better enable a business to track information for their company. We were to perform a SWOT analysis in order to better
+determine the need for such a database.
+
+## The entity relationship diagram is as follows:
 
 ## Building
 The project is managed by Gradle, and can be built with:
@@ -10,7 +15,7 @@ Automated tests can be run with
 
 ## Running
 
-Navigate to the dirctory of the created .jar. Ensure project.db and CSC289DatabaseTest-1.0.jar are in the same folder
+Navigate to the directory of the created .jar. Ensure project.db and CSC289DatabaseTest-1.0.jar are in the same folder
 
 Once in the correct directory enter java -jar CSC289DatabaseTest-1.0.jar
 
@@ -19,6 +24,21 @@ Successful execution will show output such as:
 
 Connection made
 --------------------------------------
+```````````````````````angular2html
+Welcome to the DB Connection tool
+Please choose fom the following:
+1. Customer menu
+2. Employee menu
+3. Sale menu
+4. Inventory menu
+5. Show all tables
+6. Exit
+
+
+```````````````````````
+Each sub menu contains options for updating, deleting, viewing, and adding row information for the tables.
+
+## Starting table example:
 
 Employees
 
@@ -75,6 +95,7 @@ Inventory
 -----------------------------------------------------------------------------------
 
 Sales
+
 -----------------------------------------------------------------------------------
 
        SID   Quantity      Total        EID        IID        CID

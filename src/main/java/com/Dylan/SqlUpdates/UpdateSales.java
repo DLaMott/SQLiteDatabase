@@ -34,7 +34,6 @@ public class UpdateSales {
         addSalesItem.setInt(4, IID);
         addSalesItem.setInt(5, EID);
         addSalesItem.executeUpdate();
-
     }
 
     /***
