@@ -3,7 +3,9 @@ This project was created as a final programming capstone project for GTCC. The g
 to better enable a business to track information for their company. We were to perform a SWOT analysis in order to better
 determine the need for such a database.
 
-## The entity relationship diagram is as follows:
+
+# The entity relationship diagram is as follows:
+![CSC 289 ERModel](https://user-images.githubusercontent.com/66742430/161339704-dda09e08-772d-4eb5-9b69-ec8a0c5ec7d7.png)
 
 ## Building
 The project is managed by Gradle, and can be built with:
