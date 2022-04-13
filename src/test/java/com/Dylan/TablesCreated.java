@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.sql.*;
 
 
-class SQLiteTablesCreated {
+class TablesCreated {
 
     public static final String EMPLOYEE_SQL = "SELECT * FROM Employees";
     public static final String CUSTOMER_SQL = "SELECT * FROM Customers";
