@@ -87,7 +87,7 @@ public class UpdateCustomers {
         addCustomers.setString(2, customerLN);
 
         addCustomers.executeUpdate();
-        System.out.println("A customer has been added with th name: " + customerFN + " " + customerLN);
+        System.out.println("A customer has been added with the name: " + customerFN + " " + customerLN);
 
     }
 
