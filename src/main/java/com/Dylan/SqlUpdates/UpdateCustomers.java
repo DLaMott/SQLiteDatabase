@@ -78,7 +78,6 @@ public class UpdateCustomers {
         deleteCustomer.setString(1, CID);
 
         deleteCustomer.executeUpdate();
-        System.out.println("Delete Customer where ID = " + CID);
     }
 
     public static void addCustomer(String customerFN, String customerLN, Connection connection) throws SQLException {
@@ -87,8 +86,6 @@ public class UpdateCustomers {
         addCustomers.setString(2, customerLN);
 
         addCustomers.executeUpdate();
-        System.out.println("A customer has been added with the name: " + customerFN + " " + customerLN);
-
     }
 
     /***

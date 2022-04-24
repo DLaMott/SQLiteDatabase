@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 public class UpdateSales {
 
     private static final String DELETE_SALE_BY_ID =
-            "DELETE FROM Sales WHERE IID = ?";
+            "DELETE FROM Sales WHERE SID = ?";
     private static final String ADD_SALE =
             "INSERT INTO Sales (SQty, STotal, CID, IID, EID) VALUES (?, ?, ?, ?, ?)";
     public static final String SHOW_SALES =

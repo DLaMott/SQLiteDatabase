@@ -4,7 +4,6 @@ import java.sql.*;
 
 public class UpdateEmployees {
 
-
     private static final String UPDATE_EMPLOYEE_BY_ID =
             "UPDATE Employees SET EFname = ?," +
                     "ELname = ? WHERE EID = ?";
@@ -40,7 +39,6 @@ public class UpdateEmployees {
             System.out.println("Please try again!");
             ex.printStackTrace();
         }
-
     }
 
     /***
@@ -64,7 +62,6 @@ public class UpdateEmployees {
             System.out.println("Please try again!");
             ex.printStackTrace();
         }
-
     }
 
     /***
@@ -85,8 +82,6 @@ public class UpdateEmployees {
         addEmployees.setString(1, employeeFN);
         addEmployees.setString(2, employeeLN);
         addEmployees.executeUpdate();
-
-
     }
 
     /***
