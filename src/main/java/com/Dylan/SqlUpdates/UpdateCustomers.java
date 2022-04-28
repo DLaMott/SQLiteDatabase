@@ -17,7 +17,6 @@ public class UpdateCustomers {
     public static final String CUSTOMER_SQL =
             "SELECT * FROM Customers";
 
-
     /***
      * Updates a customer based on their ID.
      * @param CID The customer ID
@@ -109,6 +108,24 @@ public class UpdateCustomers {
             String lastName = resultSet.getString("CLname");
             String CID = resultSet.getString("CID");
             System.out.printf("%n %20s %20s %20s", firstName, lastName, CID);
+        }
+        System.out.println();
+        System.out.println("-----------------------------------------------------------------------------------");
+    }
+
+    public static void showCustomersNames(Connection connection) throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(CUSTOMER_SQL);
+
+        System.out.println("\nCustomers");
+        System.out.println("-----------------------------------------------------------------------------------");
+
+        System.out.printf("%n %20s %20s", "First name", "Last Name");
+
+        while (resultSet.next()) {
+            String firstName = resultSet.getString("CFname");
+            String lastName = resultSet.getString("CLname");
+            System.out.printf("%n %20s %20s", firstName, lastName);
         }
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------------");

@@ -14,6 +14,9 @@ public class UpdateInventory {
             "INSERT INTO Inventory (IDesc, IPrice) VALUES (?, ?)";
     public static final String SHOW_INVENTORY =
             "SELECT * FROM Inventory";
+    public static final String SHOW_DOUBLE_SOLD_INVENTORY =
+            "SELECT Inventory.IDesc, Inventory.IPrice, Inventory.IID FROM Inventory" +
+                    " JOIN Sales ON Inventory.IID = Sales.IID WHERE Sales.SQty >= 2";
 
     /***
      * Updates an Inventory based on the ID.
@@ -88,6 +91,36 @@ public class UpdateInventory {
             String price = DecimalFormat.getCurrencyInstance().format(inventoryPrice);
 
             System.out.printf("%n %20s %20s %20s", inventoryID, inventoryDes, price);
+        }
+        System.out.println();
+        System.out.println("-----------------------------------------------------------------------------------");
+    }
+
+    public static void showInventorySoldTwice(Connection connection) throws SQLException{
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(SHOW_DOUBLE_SOLD_INVENTORY);
+
+        System.out.println("-----------------------------------------------------------------------------------");
+
+        while (resultSet.next()){
+
+            String inventoryDes = resultSet.getString("IDesc");
+            double inventoryPrice = resultSet.getDouble("IPrice");
+            String price = DecimalFormat.getCurrencyInstance().format(inventoryPrice);
+            System.out.printf("%n %20s %20s", inventoryDes, price);
+        }
+        System.out.println();
+        System.out.println("-----------------------------------------------------------------------------------");
+    }
+    public static void showInventoryDescriptions(Connection connection) throws SQLException{
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(SHOW_INVENTORY);
+
+        System.out.println("-----------------------------------------------------------------------------------");
+        while (resultSet.next()){
+
+            String inventoryDes = resultSet.getString("IDesc");
+            System.out.printf("%n %20s", inventoryDes);
         }
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------------");

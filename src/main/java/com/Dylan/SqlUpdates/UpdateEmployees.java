@@ -109,5 +109,22 @@ public class UpdateEmployees {
         System.out.println();
         System.out.println("-----------------------------------------------------------------------------------");
     }
+    public static void showEmployeesLastName(Connection connection) throws SQLException {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(SHOW_EMPLOYEE);
+
+        System.out.println("\nEmployees");
+        System.out.println("-----------------------------------------------------------------------------------");
+
+        System.out.printf("%n %20s %20s", "EmployeeID", "LastName");
+
+        while (resultSet.next()) {
+            String EID = resultSet.getString("EID");
+            String lastName = resultSet.getString("ELname");
+            System.out.printf("%n %20s %20s", EID, lastName);
+        }
+        System.out.println();
+        System.out.println("-----------------------------------------------------------------------------------");
+    }
 }
 

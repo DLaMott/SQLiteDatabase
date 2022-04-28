@@ -1,6 +1,11 @@
 package com.Dylan.Menus;
 
+import com.Dylan.SqlUpdates.UpdateCustomers;
+import com.Dylan.SqlUpdates.UpdateEmployees;
+import com.Dylan.SqlUpdates.UpdateInventory;
+
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class FinalMenu {
@@ -13,7 +18,7 @@ public class FinalMenu {
                     "\n5. Exit";
     public static boolean isValid = true;
 
-    public static void finalMenu(Connection connection){
+    public static void finalMenu(Connection connection) throws SQLException {
 
         if (!isValid){
             isValid = true;
@@ -26,12 +31,16 @@ public class FinalMenu {
 
             switch (input){
                 case "1":
+                    UpdateInventory.showInventorySoldTwice(connection);
                     break;
                 case "2":
+                    UpdateCustomers.showCustomersNames(connection);
                     break;
                 case "3":
+                    UpdateInventory.showInventoryDescriptions(connection);
                     break;
                 case "4":
+                    UpdateEmployees.showEmployeesLastName(connection);
                     break;
                 case "5":
                     isValid = false;
