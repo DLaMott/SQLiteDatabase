@@ -113,7 +113,7 @@ public class UpdateEmployees {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(SHOW_EMPLOYEE);
 
-        System.out.println("\nEmployees");
+        System.out.println("\nEmployees by last name");
         System.out.println("-----------------------------------------------------------------------------------");
 
         System.out.printf("%n %20s %20s", "EmployeeID", "LastName");

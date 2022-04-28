@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class FinalMenu {
     private static final String FINAL_MENU =
                     "Final Project" +
-                    "\n1. Show inventory that has been sold twice" +
+                    "\n1. Show inventory that has been sold twice or more" +
                     "\n2. Show all customers by first and last name" +
                     "\n3. Show inventory descriptions" +
                     "\n4. Show employee ID and last name only" +

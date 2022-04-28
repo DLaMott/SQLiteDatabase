@@ -100,6 +100,7 @@ public class UpdateInventory {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(SHOW_DOUBLE_SOLD_INVENTORY);
 
+        System.out.println("Inventories with two or more sales");
         System.out.println("-----------------------------------------------------------------------------------");
 
         while (resultSet.next()){
@@ -116,7 +117,9 @@ public class UpdateInventory {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(SHOW_INVENTORY);
 
+        System.out.println("Inventory Descriptions");
         System.out.println("-----------------------------------------------------------------------------------");
+
         while (resultSet.next()){
 
             String inventoryDes = resultSet.getString("IDesc");

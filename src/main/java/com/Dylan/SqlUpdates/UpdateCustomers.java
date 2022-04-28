@@ -117,9 +117,8 @@ public class UpdateCustomers {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(CUSTOMER_SQL);
 
-        System.out.println("\nCustomers");
+        System.out.println("\nCustomer names only");
         System.out.println("-----------------------------------------------------------------------------------");
-
         System.out.printf("%n %20s %20s", "First name", "Last Name");
 
         while (resultSet.next()) {
