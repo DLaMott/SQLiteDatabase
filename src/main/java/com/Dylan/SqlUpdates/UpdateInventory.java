@@ -16,7 +16,7 @@ public class UpdateInventory {
             "SELECT * FROM Inventory";
     public static final String SHOW_DOUBLE_SOLD_INVENTORY =
             "SELECT Inventory.IDesc, Inventory.IPrice, Inventory.IID FROM Inventory" +
-                    " JOIN Sales ON Inventory.IID = Sales.IID WHERE Sales.SQty >= 2";
+                    " JOIN Sales ON Sales.IID = Inventory.IID WHERE Sales.SQty >= 2";
 
     /***
      * Updates an Inventory based on the ID.
